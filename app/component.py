@@ -12,7 +12,7 @@ def get_base64_of_bin_file(bin_file):
 
 def page_style():
     # Encode the local GIF to base64
-    sidebar_gif_base64 = get_base64_of_bin_file('assets/computer_background.jpg')
+    sidebar_gif_base64 = get_base64_of_bin_file('assets/movie_background.jpg')
 
     # Apply custom styles, including the sidebar background GIF
     custom_style = f"""
@@ -65,7 +65,7 @@ def page_style():
     st.markdown(custom_style, unsafe_allow_html=True)
 
     # Display the main background image
-    image = Image.open('photos/Background_Photo.png')
+    image = Image.open('assets/cinema_background.png')
     st.image(image)
 
     # Sidebar content
@@ -74,19 +74,20 @@ def page_style():
         st.image("photos/Round_Profile_Photo.png", width=150)
 
         st.markdown("""
-            ## Web Scraping Project
-            **This project focuses on scraping job listings from various online platforms, extracting details such as job title, company, location, and posting date. The aim is to analyze and visualize the data to gain insights into job market trends and opportunities.**
+            ## Recommender System Project
+            **This project focuses on building a content-based recommender system using data from movie platforms. It extracts and processes data such as movie genres, keywords, cast, and crew to recommend similar movies. By using techniques like natural language processing (NLP), vectorization, and cosine similarity, this project analyzes and recommends movies based on metadata.**
         """)
 
         st.markdown("""
         ### Relevant Skills
-        - **Web Scraping Techniques (Beautiful Soup, Scrapy)**
-        - **Data Collection**
-        - **Data Profiling**
-        - **Data Analysis**
+        - **Natural Language Processing (NLP)**
+        - **Text Preprocessing (Tokenization, Stemming)**
+        - **Feature Extraction and Vectorization (TF-IDF, CountVectorizer)**
+        - **Cosine Similarity for Recommendations**
+        - **Data Collection and Merging**
         - **Data Visualization**
-        - **Python (Programming Language)**
-        - **Streamlit,HTML,CSS**
+        - **Python Programming (Pandas, NumPy, Scikit-learn)**
+        - **Streamlit, HTML, CSS**
         """)
 
         # HTML and JavaScript to open YouTube in a new tab
