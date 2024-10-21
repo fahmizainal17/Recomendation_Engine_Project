@@ -56,10 +56,7 @@ def recommend(movie):
 
 # Streamlit app title
 st.title('Movie Recommender System Using Machine Learning 🍿')
-st.markdown(
-    "<style>div.stButton > button {color: black; background-color: #FFEA00; border-radius: 8px;}</style>", 
-    unsafe_allow_html=True
-)
+st.markdown("<style>div.stButton > button {color: white; background-color: #ff6347; border-radius: 8px;}</style>", unsafe_allow_html=True)
 
 # Load movie list and similarity matrix from pickle files
 movies = pickle.load(open('artifacts/movie_list.pkl', 'rb'))
