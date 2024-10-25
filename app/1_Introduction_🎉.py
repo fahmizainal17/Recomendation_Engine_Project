@@ -43,7 +43,7 @@ movies_df['genres'] = movies_df['genres'].apply(lambda x: ', '.join([i['name'] f
 movies_df['keywords'] = movies_df['keywords'].apply(lambda x: ', '.join([i['name'] for i in ast.literal_eval(x)]) if pd.notna(x) else '')
 
 # Display cleaned dataset using Streamlit's data frame viewer
-st.write("#### Movies Dataset Overview (Cleaned)")
+st.write("#### Movies Dataset Overview (Raw Data)")
 st.dataframe(movies_df.head(50))
 
 # Adding visualization diagram
