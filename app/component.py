@@ -39,8 +39,8 @@ def page_style():
                 right: 2rem;
             }}
 
-            .stButton>button {{background-color: #00dadb; color: white !important;}}
-            .stDownloadButton>button {{background-color: #00dadb; color: white !important;}}
+            .stButton>button {{background-color: #FFA500; color: white !important;}}
+            .stDownloadButton>button {{background-color: #FFA500; color: white !important;}}
 
             /* Certification Card Styles */
             .cert-card {{
@@ -71,11 +71,10 @@ def page_style():
     # Sidebar content
     with st.sidebar:
         # Display the round profile picture at the top of the sidebar
-        st.image("photos/Round_Profile_Photo.png", width=150)
+        st.image("photos/Round_Profile_Photo.png", width=100)
 
         st.markdown("""
             ## Recommender System Project
-            **This project focuses on building a content-based recommender system using data from movie platforms. It extracts and processes data such as movie genres, keywords, cast, and crew to recommend similar movies. By using techniques like natural language processing (NLP), vectorization, and cosine similarity, this project analyzes and recommends movies based on metadata.**
         """)
 
         st.markdown("""
@@ -93,7 +92,7 @@ def page_style():
         # HTML and JavaScript to open YouTube in a new tab
         new_tab_button = """
         <a href="https://www.youtube.com/watch?v=VeUiVCb7ZmQ?si=GzSBUP3zs1hEkigI" target="_blank">
-            <button style="background-color: #ff6347; color: white; border: none; padding: 10px 20px; text-align: center; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 8px;">
+            <button style="background-color: #FFA500; color: white; border: none; padding: 10px 20px; text-align: center; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 8px;">
                 🎵 Play Music while Reading
             </button>
         </a>

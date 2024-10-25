@@ -42,6 +42,9 @@ def fetch_metrics_for_hover(movie_id):
 
 # Recommendation function to get movie details
 def recommend(movie):
+    # Load movie list and similarity matrix from pickle files
+    movies = pickle.load(open('artifacts/movie_list.pkl', 'rb'))
+    similarity = pickle.load(open('artifacts/similarity.pkl', 'rb'))
     index = movies[movies['title'] == movie].index[0]
     distances = sorted(list(enumerate(similarity[index])), reverse=True, key=lambda x: x[1])
     recommended_movie_ids = []

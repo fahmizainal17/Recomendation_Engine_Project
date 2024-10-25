@@ -27,23 +27,35 @@ def movies_tab_1():
     movies_df['keywords'] = movies_df['keywords'].apply(lambda x: ', '.join([i['name'] for i in ast.literal_eval(x)]) if pd.notna(x) else '')
 
     # Display cleaned dataset
-    st.write("#### Browse Our Movies Collection")
+    st.write("#### Browse Our Movies Raw Data")
     st.dataframe(movies_df.head(50))
 
     # Visualize Genre Distribution
     st.markdown("### Genre Distribution")
     genre_count = movies_df['genres'].str.split(', ').explode().value_counts().reset_index()
     genre_count.columns = ['Genre', 'Count']
-    fig_genre = px.bar(genre_count, x='Genre', y='Count', title='Popular Movie Genres', labels={'Genre': 'Genre', 'Count': 'Count'})
-    st.plotly_chart(fig_genre)
+    fig_genre = px.bar(
+        genre_count, 
+        x='Genre', 
+        y='Count', 
+        title='Popular Movie Genres', 
+        labels={'Genre': 'Genre', 'Count': 'Count'},
+        color_discrete_sequence=["#FFA500"]
+    )
 
     # Visualization: Top Keywords
     st.markdown("### Popular Keywords in Movies")
     keyword_count = movies_df['keywords'].str.split(', ').explode().value_counts().reset_index().head(20)
     keyword_count.columns = ['Keyword', 'Count']
-    fig_keywords = px.bar(keyword_count, x='Keyword', y='Count', title='Top Keywords in Movies', labels={'Keyword': 'Keyword', 'Count': 'Count'})
-    st.plotly_chart(fig_keywords)
-
+    fig_keywords = px.bar(
+        keyword_count, 
+        x='Keyword', 
+        y='Count', 
+        title='Top Keywords in Movies', 
+        labels={'Keyword': 'Keyword', 'Count': 'Count'},
+        color_discrete_sequence=["#FFA500"]
+    )
+  
     # How to Use the Movie Recommender
     st.markdown("""
     ### How It Works

@@ -3,15 +3,11 @@ import streamlit as st
 import requests
 from component import page_style
 import streamlit.components.v1 as components
-from modules.backend import fetch_poster, shorten_overview, shorten_overview, recommend
+from modules.backend import fetch_poster,fetch_metrics_for_hover, shorten_overview, shorten_overview, recommend
 from modules.movie_tab_1 import movies_tab_1
 
 # Apply the page style using a function from your components module
 page_style()
-
-# Load movie list and similarity matrix from pickle files
-movies = pickle.load(open('artifacts/movie_list.pkl', 'rb'))
-similarity = pickle.load(open('artifacts/similarity.pkl', 'rb'))
 
 # Define the tabs
 tab1, tab2 = st.tabs(["About👋", "Movies Recommendation App🍿"])
@@ -23,8 +19,10 @@ with tab1:
 # Content for Tab 2
 with tab2:
     st.title('Movie Recommender System Using Machine Learning 🍿')
-    st.markdown("<style>div.stButton > button {color: white; background-color: #ff6347; border-radius: 8px;}</style>", unsafe_allow_html=True)
-
+    
+    # Load movie list and similarity matrix from pickle files
+    movies = pickle.load(open('artifacts/movie_list.pkl', 'rb'))
+    
     # Dropdown to select a movie
     movie_list = movies['title'].values
     selected_movie = st.selectbox("Type or select a movie from the dropdown", movie_list)
