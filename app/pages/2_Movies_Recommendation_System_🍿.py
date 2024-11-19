@@ -54,7 +54,7 @@ with tab2:
                                 <p><strong>Overview:</strong> {movie_details['Overview']}</p>
                                 <p><strong>Popularity:</strong> {movie_details['Popularity']}</p>
                                 <p><strong>Vote Average:</strong> {movie_details['Vote Average']}</p>
-                                <p><strong>Revenue:</strong> ${movie_details['Revenue']:,}</p>
+                                <p><strong>Revenue:</strong> ${movie_details['Revenue']}</p>
                                 <p><strong>Release Date:</strong> {movie_details['Release Date']}</p>
                                 <p><strong>Adult Content:</strong> {movie_details['Adult']}</p>
                             </div>
