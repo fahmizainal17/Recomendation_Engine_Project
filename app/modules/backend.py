@@ -6,6 +6,7 @@ import pandas as pd
 import json
 import ast
 import plotly.express as px
+import gzip
 
 # Function to fetch movie poster URL
 def fetch_poster(movie_id):
@@ -44,7 +45,7 @@ def fetch_metrics_for_hover(movie_id):
 def recommend(movie):
     # Load movie list and similarity matrix from pickle files
     movies = pickle.load(open('artifacts/movie_list.pkl', 'rb'))
-    similarity = pickle.load(open('artifacts/similarity.pkl', 'rb'))
+    similarity = pickle.load(gzip.open('artifacts/similarity.pkl.gz', 'rb'))
     index = movies[movies['title'] == movie].index[0]
     distances = sorted(list(enumerate(similarity[index])), reverse=True, key=lambda x: x[1])
     recommended_movie_ids = []
