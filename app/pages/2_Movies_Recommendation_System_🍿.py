@@ -1,7 +1,7 @@
 import pickle
 import streamlit as st
 import requests
-from component import page_style
+from component_job_rec import page_style
 import streamlit.components.v1 as components
 from modules.backend import fetch_poster,fetch_metrics_for_hover, shorten_overview, shorten_overview, recommend
 from modules.movie_tab_1 import movies_tab_1
