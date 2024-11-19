@@ -1,5 +1,5 @@
 import streamlit as st
-from component import page_style
+from component_job_rec import page_style
 
 page_style()
 
