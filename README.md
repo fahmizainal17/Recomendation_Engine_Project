@@ -1,8 +1,8 @@
-# **🎥🌍 Recommendation Engine Project** [![wakatime](https://wakatime.com/badge/user/ae82a943-125e-489a-a656-e35fe84d587b/project/9ebf50ae-2f3d-47d3-ac24-6fc2598ab3e2.svg)](https://wakatime.com/badge/user/ae82a943-125e-489a-a656-e35fe84d587b/project/9ebf50ae-2f3d-47d3-ac24-6fc2598ab3e2)
+# **🎥 Recommendation Engine Project** [![wakatime](https://wakatime.com/badge/user/ae82a943-125e-489a-a656-e35fe84d587b/project/9ebf50ae-2f3d-47d3-ac24-6fc2598ab3e2.svg)](https://wakatime.com/badge/user/ae82a943-125e-489a-a656-e35fe84d587b/project/9ebf50ae-2f3d-47d3-ac24-6fc2598ab3e2)
 
 <!-- Badge to Visit Project -->
 <div align="center"> 
-    <a href="https://your-streamlit-app-url.com">
+    <a href="https://recommendation-engine-project.streamlit.app/">
         <img src="https://img.shields.io/badge/Visit%20Recommendation%20Engine%20Project-brightgreen?style=for-the-badge&logo=streamlit" alt="Visit Recommendation Engine Project"/>
     </a>
 </div>
@@ -11,47 +11,44 @@
 
 ## **📋 Overview**
 
-The **Recommendation Engine Project** is a web-based application designed to demonstrate the practical implementation of different recommendation systems. The project includes two key use cases:  
-- **🎥 Movie Recommender System** using **Content-Based Filtering**.  
-- **🌍 Job Recommender System** using **Hybrid Models**.  
+The **Recommendation Engine Project** is a Streamlit-based web application that demonstrates the implementation of **content-based filtering** for recommendation systems. It showcases two key applications:  
+- 🎥 **Movie Recommender System**: Recommends movies based on metadata such as genres, cast, and directors.  
+- 🌍 **Job Recommender System**: Recommends jobs by analyzing textual features like job descriptions and titles.  
 
-This project showcases advanced recommendation system techniques through interactive dashboards, highlighting their real-world applications.
+This project highlights the power of data-driven recommendations and provides an interactive way to explore content-based recommendation systems.
 
 ---
 
 ## **Table of Contents**
 
-1. [🎯 Objectives](#-objectives)
-2. [🔧 Technologies Used](#-technologies-used)
-3. [🗂️ Directory Structure](#-directory-structure)
-4. [📁 Key Features](#-key-features)
-5. [📊 Visual Elements](#-visual-elements)
-6. [🔄 Project Workflow](#-project-workflow)
-7. [🎉 Conclusion](#-conclusion)
-8. [🔮 Future Enhancements](#-future-enhancements)
-9. [📚 References](#-references)
-10. [📜 License](#-license)
+1. [🎯 Objectives](#-objectives)  
+2. [🔧 Technologies Used](#-technologies-used)  
+3. [🗂️ Directory Structure](#-directory-structure)  
+4. [📁 Features](#-features)  
+5. [🔄 Project Workflow](#-project-workflow)  
+6. [🎉 Conclusion](#-conclusion)  
+7. [📚 References](#-references)  
+8. [📜 License](#-license)  
 
 ---
 
 ## **🎯 Objectives**
 
-- **📚 Educate** users about recommendation system concepts and techniques.  
-- **🎥 Provide interactive demos** of movie and job recommendation use cases.  
-- **🔍 Showcase advanced techniques** like hybrid modeling and matrix factorization.  
+- Build an interactive platform to demonstrate **content-based filtering** in real-world applications.  
+- Provide a hands-on experience for users to explore recommendation results dynamically.  
+- Use metadata and textual data effectively for generating recommendations.  
 
 ---
 
 ## **🔧 Technologies Used**
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)  
-![Streamlit](https://img.shields.io/badge/Streamlit-%23FF4B4B.svg?style=for-the-badge&logo=Streamlit&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-%23FF4B4B.svg?style=for-the-badge&logo=Streamlit&logoColor=white)  
 
 Other libraries:
-- Pandas
-- Scikit-learn
-- Numpy
-- Matplotlib
+- Pandas  
+- Scikit-learn  
+- Numpy  
 
 ---
 
@@ -60,18 +57,11 @@ Other libraries:
 ```plaintext
 .
 ├── LICENSE
-├── Movie_Recommender_System_Data_Analysis.ipynb
 ├── README.md
 ├── app
 │   ├── 1_Introduction_🎉.py
 │   ├── component.py
-│   ├── component_job_rec.py
-│   ├── modules
-│   │   ├── backend.py
-│   │   ├── job_tab_1.py
-│   │   ├── movie_tab_1.py
-│   │   └── text.py
-│   └── pages
+│   ├── pages
 │       ├── 2_Movies_Recommendation_System_🍿.py
 │       └── 3_Jobs_Recommendations_System_🌍.py
 ├── artifacts
@@ -81,76 +71,50 @@ Other libraries:
 │   ├── Job_Recommender_Background.png
 │   ├── movie_background.jpg
 ├── datasets
-│   ├── Job_Dataset
-│   │   ├── Synthetic_Job_Postings_Data.csv
-│   │   └── Synthetic_Resumes_Data.csv
 │   ├── tmdb_5000_credits.csv
-│   └── tmdb_5000_movies.csv
-├── photos
-│   ├── Background_Photo.png
-│   └── Round_Profile_Photo.png
+│   ├── tmdb_5000_movies.csv
+│   ├── Synthetic_Job_Postings_Data.csv
+│   └── Synthetic_Resumes_Data.csv
 └── requirements.txt
 ```
 
 ---
 
-## **📁 Key Features**
+## **📁 Features**
 
-1. **🎥 Movie Recommender System**:
-   - **Content-Based Filtering** approach using movie metadata such as genres, cast, and crew.
-   - Recommendations based on user preferences.
+### 1. 🎥 Movie Recommender System
+- Uses **content-based filtering**.  
+- Recommends movies by analyzing metadata (e.g., genres, directors, cast).  
+- Allows users to select a movie and receive similar recommendations.  
 
-2. **🌍 Job Recommender System**:
-   - **Collaborative Filtering** and **Hybrid Models** combining user-job interaction matrices and job metadata.
-   - Advanced feature extraction using TF-IDF for job descriptions.
-
-3. **📈 Data Analysis**:
-   - Data visualization and exploratory data analysis (EDA) included in Jupyter notebooks.
-
----
-
-## **📊 Visual Elements**
-
-- **Interactive Components**:
-  - Input fields for user preferences.
-  - Searchable job and movie databases.
-
-- **Data Visualizations**:
-  - Charts and tables for data insights.
-  - Dynamic background images for each recommendation system.
+### 2. 🌍 Job Recommender System
+- Based on **TF-IDF vectorization** of job titles and descriptions.  
+- Provides job recommendations tailored to user input.  
 
 ---
 
 ## **🔄 Project Workflow**
 
-1. **📂 Setup Environment**:
-   - Install the dependencies using `requirements.txt`.
+1. **📂 Environment Setup**:
+   - Install dependencies using `requirements.txt`.  
 
-2. **🔍 Data Preparation**:
-   - Process datasets such as TMDb movies and synthetic job postings.
+2. **🔍 Data Processing**:
+   - Process datasets (TMDb movies, synthetic job postings) for feature extraction.  
 
 3. **🧠 Model Development**:
-   - Train and test models for content-based filtering and collaborative filtering.
+   - Create similarity matrices using content-based techniques like cosine similarity and TF-IDF.  
 
 4. **🚀 Web App Development**:
-   - Build interactive pages for Movie and Job Recommender Systems using Streamlit.
+   - Build dynamic dashboards using Streamlit for both recommendation systems.  
 
 5. **🌐 Deployment**:
-   - Deploy the application for public use.
+   - Deploy the app using Streamlit's cloud services.  
 
 ---
 
 ## **🎉 Conclusion**
 
-This project demonstrates how recommendation systems can be applied in real-world scenarios, providing a user-friendly platform to explore different algorithms and techniques. 
-
----
-
-## **🔮 Future Enhancements**
-
-- **💡 Add New Use Cases**: Expand to other domains like e-commerce and music.  
-- **🤖 Advanced Techniques**: Incorporate neural collaborative filtering and reinforcement learning.  
-- **🌐 Enhanced User Interface**: Improve design and add mobile compatibility.  
+This project demonstrates how **content-based filtering** can be applied effectively in different domains like movies and jobs. The interactive application enables users to explore recommendations dynamically and learn about the underlying algorithms.  
 
 ---
 
